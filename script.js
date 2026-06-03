@@ -1,13 +1,24 @@
 console.log("Miss Haru Website Loaded");
 
-const lessonButtons = document.querySelectorAll(".card button");
+function showSemester(id, button){
 
-lessonButtons.forEach(button => {
+    const semesters =
+        document.querySelectorAll(".semester-content");
 
-    button.addEventListener("click", () => {
-
-        alert("Lesson page coming soon!");
-
+    semesters.forEach(section => {
+        section.classList.add("hidden");
     });
 
-});
+    const buttons =
+        document.querySelectorAll(".semester-btn");
+
+    buttons.forEach(btn => {
+        btn.classList.remove("active");
+    });
+
+    document
+        .getElementById(id)
+        .classList.remove("hidden");
+
+    button.classList.add("active");
+}
