@@ -9,22 +9,22 @@
 <body>
 
 <header>
-    <h1>Miss Haru</h1>
-    <p>Computer Science Teacher • 1AS</p>
+    <h1 data-i18n="header_h1">Miss Haru</h1>
+    <p data-i18n="header_p">Computer Science Teacher • 1AS</p>
 </header>
 
 <nav>
 
     <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#lessons">Lessons</a>
-        <a href="#exams">Exams</a>
-        <a href="#resources">Resources</a>
+        <a href="#about" data-i18n="nav_about">About</a>
+        <a href="#lessons" data-i18n="nav_lessons">Lessons</a>
+        <a href="#exams" data-i18n="nav_exams">Exams</a>
+        <a href="#resources" data-i18n="nav_resources">Resources</a>
     </div>
 
     <div class="controls">
 
-        <button id="themeBtn">
+        <button id="themeBtn" data-i18n="theme_btn">
             🌙 Dark Mode
         </button>
 
@@ -38,21 +38,21 @@
 
 </nav>
 <section class="hero">
-    <h2 id="welcomeTitle" >Welcome Students 👩‍🏫</h2>
-    <p>
+    <h2 data-i18n="hero_h2">Welcome Students 👩‍🏫</h2>
+    <p data-i18n="hero_p">
         Find all your lessons, exercises, exams and revision resources
         in one place.
     </p>
 
     <div class="buttons">
-        <a href="#lessons" class="btn">Lessons</a>
-        <a href="#exams" class="btn">Exams</a>
+        <a href="#lessons" class="btn" data-i18n="hero_btn_lessons">Lessons</a>
+        <a href="#exams" class="btn" data-i18n="hero_btn_exams">Exams</a>
     </div>
 </section>
 
 <section id="about">
-    <h2>About Miss Haru</h2>
-    <p>
+    <h2 data-i18n="about_h2">About Miss Haru</h2>
+    <p data-i18n="about_p">
         Welcome to my educational website for 1AS students.
         Here you will find course materials, exercises,
         exams and useful resources for Computer Science.
@@ -60,57 +60,57 @@
 </section>
 
 <section id="lessons">
-    <h2>Lessons</h2>
+    <h2 data-i18n="lessons_h2">Lessons</h2>
 
     <div class="cards">
 
         <div class="card">
-            <h3>🖥 Computer Components</h3>
-            <p>Hardware, Software, Memory and Storage.</p>
+            <h3 data-i18n="lessons_card1_h3">🖥 Computer Components</h3>
+            <p data-i18n="lessons_card1_p">Hardware, Software, Memory and Storage.</p>
         </div>
 
         <div class="card">
-            <h3>🔀 Algorithms & Organigrams</h3>
-            <p>Variables, Input, Output and Flowcharts.</p>
+            <h3 data-i18n="lessons_card2_h3">🔀 Algorithms & Organigrams</h3>
+            <p data-i18n="lessons_card2_p">Variables, Input, Output and Flowcharts.</p>
         </div>
 
         <div class="card">
-            <h3>🌐 HTML Language</h3>
-            <p>HTML Structure, Tags, Images, Tables and Links.</p>
+            <h3 data-i18n="lessons_card3_h3">🌐 HTML Language</h3>
+            <p data-i18n="lessons_card3_p">HTML Structure, Tags, Images, Tables and Links.</p>
         </div>
 
     </div>
 </section>
 
 <section id="exercises">
-    <h2>Exercises</h2>
+    <h2 data-i18n="exercises_h2">Exercises</h2>
 
     <ul>
-        <li>Algorithm Exercises</li>
-        <li>Flowchart Practice</li>
-        <li>HTML Activities</li>
-        <li>Homework Sheets</li>
+        <li data-i18n="exercises_li1">Algorithm Exercises</li>
+        <li data-i18n="exercises_li2">Flowchart Practice</li>
+        <li data-i18n="exercises_li3">HTML Activities</li>
+        <li data-i18n="exercises_li4">Homework Sheets</li>
     </ul>
 </section>
 
 <section id="exams">
-    <h2>Tests & Exams</h2>
+    <h2 data-i18n="exams_h2">Tests & Exams</h2>
 
     <div class="semester-buttons">
 
         <button class="semester-btn active"
                 onclick="showSemester('s1', this)">
-            Semester 1
+            <span data-i18n="semester_btn1">Semester 1</span>
         </button>
 
         <button class="semester-btn"
                 onclick="showSemester('s2', this)">
-            Semester 2
+            <span data-i18n="semester_btn2">Semester 2</span>
         </button>
 
         <button class="semester-btn"
                 onclick="showSemester('s3', this)">
-            Semester 3
+            <span data-i18n="semester_btn3">Semester 3</span>
         </button>
 
     </div>
@@ -120,25 +120,29 @@
 
         <a class="file-link"
            href="https://docs.google.com/document/d/1HttYBcA6JIwqnzbHLLjo4hazsIRl4T9G/edit?usp=drive_link&ouid=104030590589954354339&rtpof=true&sd=true"
-           target="_blank">
+           target="_blank"
+           data-i18n="test_01">
            📄 Test 01
         </a>
 
         <a class="file-link"
            href="https://docs.google.com/document/d/1VN7Mac-yUS4EKmp8bcrLnFptUNzkGQrN/edit?usp=drive_link&ouid=104030590589954354339&rtpof=true&sd=true"
-           target="_blank">
+           target="_blank"
+           data-i18n="test_02">
            📄 Test 02
         </a>
 
         <a class="file-link"
            href="https://docs.google.com/document/d/1Vyz4jThIdWHv7G8966OVTLlw8voYExCw/edit?usp=drive_link&ouid=104030590589954354339&rtpof=true&sd=true"
-           target="_blank">
+           target="_blank"
+           data-i18n="test_03">
            📄 Test 03
         </a>
         
         <a class="file-link"
            href="https://docs.google.com/document/d/1Las5_eQPMrxNv_8gL14Y8X1Q0MrZ-Vqn/edit?usp=drive_link&ouid=104030590589954354339&rtpof=true&sd=true"
-           target="_blank">
+           target="_blank"
+           data-i18n="test_04">
            📄 Test 04
         </a>
 
@@ -149,19 +153,22 @@
 
         <a class="file-link"
            href="https://drive.google.com/file/d/FILE_ID_4/view"
-           target="_blank">
+           target="_blank"
+           data-i18n="test_03_s2">
            📄 Test 03
         </a>
 
         <a class="file-link"
            href="https://drive.google.com/file/d/FILE_ID_5/view"
-           target="_blank">
+           target="_blank"
+           data-i18n="test_04_s2">
            📄 Test 04
         </a>
 
         <a class="file-link"
            href="https://drive.google.com/file/d/FILE_ID_6/view"
-           target="_blank">
+           target="_blank"
+           data-i18n="semester_exam">
            📄 Semester Exam
         </a>
 
@@ -172,13 +179,15 @@
 
         <a class="file-link"
            href="https://drive.google.com/file/d/FILE_ID_7/view"
-           target="_blank">
+           target="_blank"
+           data-i18n="final_exam">
            📄 Final Exam
         </a>
 
         <a class="file-link"
            href="https://drive.google.com/file/d/FILE_ID_8/view"
-           target="_blank">
+           target="_blank"
+           data-i18n="revision_test">
            📄 Revision Test
         </a>
 
@@ -187,26 +196,27 @@
 </section>
 
 <section id="resources">
-    <h2>Resources</h2>
+    <h2 data-i18n="resources_h2">Resources</h2>
 
     <ul>
-        <li>Revision Sheets</li>
-        <li>Course Summaries</li>
-        <li>Useful Websites</li>
-        <li>Printable PDFs</li>
+        <li data-i18n="resources_li1">Revision Sheets</li>
+        <li data-i18n="resources_li2">Course Summaries</li>
+        <li data-i18n="resources_li3">Useful Websites</li>
+        <li data-i18n="resources_li4">Printable PDFs</li>
     </ul>
 </section>
 
 <section id="contact">
-    <h2>Contact</h2>
+    <h2 data-i18n="contact_h2">Contact</h2>
 
-    <p>Email: hirafuyu2003@gmail.com</p>
+    <p data-i18n="contact_email">Email: hirafuyu2003@gmail.com</p>
 </section>
 
 <footer>
-    <p>© 2026 Miss Haru - Computer Science Teacher</p>
+    <p data-i18n="footer">© 2026 Miss Haru - Computer Science Teacher</p>
 </footer>
 
+<script src="translations.js"></script>
 <script src="script.js"></script>
 
 </body>

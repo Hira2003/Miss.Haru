@@ -14,22 +14,7 @@ body{
     color:#333;
     line-height:1.6;
 }
-nav{
-    background:white;
-    text-align:center;
-    padding:15px;
-    box-shadow:0 2px 8px rgba(0,0,0,.1);
-    position:sticky;
-    top:0;
-    z-index:100;
-}
 
-nav a{
-    text-decoration:none;
-    color:#6c63ff;
-    margin:0 15px;
-    font-weight:bold;
-}
 header{
     background:#6c63ff;
     color:white;
@@ -45,9 +30,59 @@ header p{
     margin-top:10px;
 }
 
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 30px;
+    background:white;
+    box-shadow:0 2px 8px rgba(0,0,0,.1);
+    position:sticky;
+    top:0;
+    z-index:100;
+}
 
-nav a:hover{
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#6c63ff;
+    font-weight:bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover{
     color:#4338ca;
+}
+
+.controls{
+    display:flex;
+    gap:10px;
+    align-items:center;
+}
+
+#themeBtn,
+#languageSelect{
+    padding:8px 12px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+    background:white;
+    color:#333;
+    transition: all 0.3s;
+}
+
+#themeBtn:hover,
+#languageSelect:hover{
+    background:#f0f0f0;
+}
+
+#languageSelect{
+    font-size: 14px;
 }
 
 .hero{
@@ -57,6 +92,13 @@ nav a:hover{
 
 .hero h2{
     margin-bottom:15px;
+    font-size: 2.5rem;
+    color: #6c63ff;
+}
+
+.hero p{
+    font-size: 1.1rem;
+    margin-bottom: 20px;
 }
 
 .buttons{
@@ -71,10 +113,12 @@ nav a:hover{
     padding:12px 25px;
     border-radius:8px;
     margin:5px;
+    transition: all 0.3s;
 }
 
 .btn:hover{
     background:#4f46e5;
+    transform: translateY(-2px);
 }
 
 section{
@@ -84,6 +128,7 @@ section{
 section h2{
     color:#6c63ff;
     margin-bottom:25px;
+    font-size: 2rem;
 }
 
 .cards{
@@ -104,14 +149,21 @@ section h2{
 
 .card:hover{
     transform:translateY(-6px);
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
 }
 
 .card h3{
     margin-bottom:10px;
+    color:#6c63ff;
 }
 
 ul{
     margin-left:20px;
+}
+
+html[dir="rtl"] ul {
+    margin-left: 0;
+    margin-right: 20px;
 }
 
 .semester-buttons{
@@ -128,6 +180,11 @@ ul{
     background:#ddd;
     cursor:pointer;
     font-weight:bold;
+    transition: all 0.3s;
+}
+
+.semester-btn:hover{
+    background:#ccc;
 }
 
 .semester-btn.active{
@@ -153,10 +210,16 @@ ul{
     border-radius:10px;
     box-shadow:0 3px 10px rgba(0,0,0,.08);
     transition:0.3s;
+    display:block;
 }
 
 .file-link:hover{
     transform:translateX(5px);
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+html[dir="rtl"] .file-link:hover {
+    transform: translateX(-5px);
 }
 
 footer{
@@ -167,50 +230,7 @@ footer{
     margin-top:50px;
 }
 
-@media(max-width:768px){
-
-    header h1{
-        font-size:2rem;
-    }
-
-    nav a{
-        display:block;
-        margin:10px;
-    }
-
-    .cards{
-        flex-direction:column;
-    }
-
-}
-nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 30px;
-    background:white;
-    box-shadow:0 2px 8px rgba(0,0,0,.1);
-}
-
-.nav-links a{
-    margin-right:15px;
-    text-decoration:none;
-    color:#6c63ff;
-    font-weight:bold;
-}
-
-.controls{
-    display:flex;
-    gap:10px;
-}
-
-#themeBtn,
-#languageSelect{
-    padding:8px 12px;
-    border:none;
-    border-radius:8px;
-    cursor:pointer;
-}
+/* Dark Mode Styles */
 .dark-mode{
     background:#1e1e1e;
     color:white;
@@ -218,18 +238,133 @@ nav{
 
 .dark-mode nav{
     background:#2a2a2a;
+    box-shadow: 0 2px 8px rgba(0,0,0,.3);
+}
+
+.dark-mode .nav-links a{
+    color:#a8a8ff;
+}
+
+.dark-mode .nav-links a:hover{
+    color:#d0d0ff;
 }
 
 .dark-mode .card{
     background:#2f2f2f;
     color:white;
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
+}
+
+.dark-mode .card:hover{
+    box-shadow:0 8px 20px rgba(0,0,0,.4);
 }
 
 .dark-mode .file-link{
     background:#2f2f2f;
     color:white;
+    box-shadow:0 3px 10px rgba(0,0,0,.3);
+}
+
+.dark-mode .file-link:hover{
+    box-shadow:0 5px 15px rgba(0,0,0,.4);
 }
 
 .dark-mode section{
     color:white;
+}
+
+.dark-mode #themeBtn,
+.dark-mode #languageSelect{
+    background:#2f2f2f;
+    color:white;
+    border-color:#444;
+}
+
+.dark-mode #themeBtn:hover,
+.dark-mode #languageSelect:hover{
+    background:#3a3a3a;
+}
+
+.dark-mode footer{
+    background:#1a1a1a;
+}
+
+.dark-mode header{
+    background:#5a52d5;
+}
+
+/* Responsive Design */
+@media(max-width:768px){
+
+    header h1{
+        font-size:2rem;
+    }
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+        padding:15px;
+    }
+
+    .nav-links{
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links a{
+        display:block;
+        margin:10px 0;
+    }
+
+    .controls{
+        width: 100%;
+        justify-content: center;
+    }
+
+    .cards{
+        flex-direction:column;
+    }
+
+    section{
+        padding:40px 5%;
+    }
+
+    .hero{
+        padding:40px 20px;
+    }
+
+    .hero h2{
+        font-size: 1.8rem;
+    }
+
+}
+
+/* Arabic RTL Support */
+html[dir="rtl"] {
+    text-align: right;
+}
+
+html[dir="rtl"] .nav-links {
+    flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .controls {
+    flex-direction: row-reverse;
+}
+
+html[dir="rtl"] section {
+    text-align: right;
+}
+
+html[dir="rtl"] .cards {
+    flex-direction: row;
+}
+
+html[dir="rtl"] ul {
+    text-align: right;
+}
+
+html[dir="rtl"] .semester-buttons {
+    justify-content: flex-end;
 }
