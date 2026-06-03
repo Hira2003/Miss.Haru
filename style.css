@@ -212,3 +212,25 @@ nav{
     border-radius:8px;
     cursor:pointer;
 }
+.dark-mode{
+    background:#1e1e1e;
+    color:white;
+}
+
+.dark-mode nav{
+    background:#2a2a2a;
+}
+
+.dark-mode .card{
+    background:#2f2f2f;
+    color:white;
+}
+
+.dark-mode .file-link{
+    background:#2f2f2f;
+    color:white;
+}
+
+.dark-mode section{
+    color:white;
+}
