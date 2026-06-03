@@ -8,112 +8,185 @@
 </head>
 <body>
 
-    <header>
-        <h1>Miss Haru</h1>
-        <p>Computer Science Teacher - 1AS</p>
-    </header>
+<header>
+    <h1>Miss Haru</h1>
+    <p>Computer Science Teacher • 1AS</p>
+</header>
 
-    <nav>
-        <a href="#about">About</a>
-        <a href="#lessons">Lessons</a>
-        <a href="#exercises">Exercises</a>
-        <a href="#exams">Exams</a>
-        <a href="#resources">Resources</a>
-        <a href="#contact">Contact</a>
-    </nav>
+<nav>
+    <a href="#about">About</a>
+    <a href="#lessons">Lessons</a>
+    <a href="#exercises">Exercises</a>
+    <a href="#exams">Exams</a>
+    <a href="#resources">Resources</a>
+    <a href="#contact">Contact</a>
+</nav>
 
-    <section class="hero">
-        <h2>Welcome Students 👩‍🏫</h2>
-        <p>
-            Learn Computer Components, Algorithms,
-            Organigrams and HTML in one place.
-        </p>
+<section class="hero">
+    <h2>Welcome Students 👩‍🏫</h2>
+    <p>
+        Find all your lessons, exercises, exams and revision resources
+        in one place.
+    </p>
 
-        <div class="buttons">
-            <a href="#lessons" class="btn">Lessons</a>
-            <a href="#exams" class="btn">Exams</a>
+    <div class="buttons">
+        <a href="#lessons" class="btn">Lessons</a>
+        <a href="#exams" class="btn">Exams</a>
+    </div>
+</section>
+
+<section id="about">
+    <h2>About Miss Haru</h2>
+    <p>
+        Welcome to my educational website for 1AS students.
+        Here you will find course materials, exercises,
+        exams and useful resources for Computer Science.
+    </p>
+</section>
+
+<section id="lessons">
+    <h2>Lessons</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>🖥 Computer Components</h3>
+            <p>Hardware, Software, Memory and Storage.</p>
         </div>
-    </section>
 
-    <section id="about">
-        <h2>About Miss Haru</h2>
-        <p>
-            Welcome to my educational website.
-            Here you will find lessons, exercises,
-            exams and additional resources for 1AS
-            Computer Science students.
-        </p>
-    </section>
-
-    <section id="lessons">
-        <h2>Lessons</h2>
-
-        <div class="cards">
-
-            <div class="card">
-                <h3>🖥 Computer Components</h3>
-                <p>Hardware, Software, Memory and Storage.</p>
-                <button>View Lesson</button>
-            </div>
-
-            <div class="card">
-                <h3>🔀 Algorithms & Organigrams</h3>
-                <p>Variables, Conditions and Flowcharts.</p>
-                <button>View Lesson</button>
-            </div>
-
-            <div class="card">
-                <h3>🌐 HTML Language</h3>
-                <p>Structure, Tags, Links, Images and Tables.</p>
-                <button>View Lesson</button>
-            </div>
-
+        <div class="card">
+            <h3>🔀 Algorithms & Organigrams</h3>
+            <p>Variables, Input, Output and Flowcharts.</p>
         </div>
-    </section>
 
-    <section id="exercises">
-        <h2>Exercises</h2>
+        <div class="card">
+            <h3>🌐 HTML Language</h3>
+            <p>HTML Structure, Tags, Images, Tables and Links.</p>
+        </div>
 
-        <ul>
-            <li>Exercise Sheet 01</li>
-            <li>Exercise Sheet 02</li>
-            <li>HTML Practice Activities</li>
-            <li>Algorithm Challenges</li>
-        </ul>
-    </section>
+    </div>
+</section>
 
-    <section id="exams">
-        <h2>Tests & Exams</h2>
+<section id="exercises">
+    <h2>Exercises</h2>
 
-        <ul>
-            <li>Test 01</li>
-            <li>Test 02</li>
-            <li>Semester Exam</li>
-            <li>Corrections</li>
-        </ul>
-    </section>
+    <ul>
+        <li>Algorithm Exercises</li>
+        <li>Flowchart Practice</li>
+        <li>HTML Activities</li>
+        <li>Homework Sheets</li>
+    </ul>
+</section>
 
-    <section id="resources">
-        <h2>Resources</h2>
+<section id="exams">
+    <h2>Tests & Exams</h2>
 
-        <ul>
-            <li>Revision Sheets</li>
-            <li>Printable PDFs</li>
-            <li>Useful Websites</li>
-        </ul>
-    </section>
+    <div class="semester-buttons">
 
-    <section id="contact">
-        <h2>Contact</h2>
+        <button class="semester-btn active"
+                onclick="showSemester('s1', this)">
+            Semester 1
+        </button>
 
-        <p>Email: hirafuyu2003@gmail.com</p>
-    </section>
+        <button class="semester-btn"
+                onclick="showSemester('s2', this)">
+            Semester 2
+        </button>
 
-    <footer>
-        <p>© 2026 Miss Haru - All Rights Reserved</p>
-    </footer>
+        <button class="semester-btn"
+                onclick="showSemester('s3', this)">
+            Semester 3
+        </button>
 
-    <script src="script.js"></script>
+    </div>
+
+    <!-- Semester 1 -->
+    <div id="s1" class="semester-content">
+
+        <a class="file-link"
+           href="https://drive.google.com/MyDrive/Miss.Haru/exams/semester1/فرض A - easier.docx"
+           target="_blank">
+           📄 Test 01
+        </a>
+
+        <a class="file-link"
+           href="https://drive.google.com/MyDrive/Miss.Haru/exams/semester1/فرض C - easier.docx"
+           target="_blank">
+           📄 Test 02
+        </a>
+
+        <a class="file-link"
+           href="https://drive.google.com/MyDrive/Miss.Haru/exams/semester1/فرض B - easier.docx"
+           target="_blank">
+           📄 Semester Exam
+        </a>
+
+    </div>
+
+    <!-- Semester 2 -->
+    <div id="s2" class="semester-content hidden">
+
+        <a class="file-link"
+           href="https://drive.google.com/file/d/FILE_ID_4/view"
+           target="_blank">
+           📄 Test 03
+        </a>
+
+        <a class="file-link"
+           href="https://drive.google.com/file/d/FILE_ID_5/view"
+           target="_blank">
+           📄 Test 04
+        </a>
+
+        <a class="file-link"
+           href="https://drive.google.com/file/d/FILE_ID_6/view"
+           target="_blank">
+           📄 Semester Exam
+        </a>
+
+    </div>
+
+    <!-- Semester 3 -->
+    <div id="s3" class="semester-content hidden">
+
+        <a class="file-link"
+           href="https://drive.google.com/file/d/FILE_ID_7/view"
+           target="_blank">
+           📄 Final Exam
+        </a>
+
+        <a class="file-link"
+           href="https://drive.google.com/file/d/FILE_ID_8/view"
+           target="_blank">
+           📄 Revision Test
+        </a>
+
+    </div>
+
+</section>
+
+<section id="resources">
+    <h2>Resources</h2>
+
+    <ul>
+        <li>Revision Sheets</li>
+        <li>Course Summaries</li>
+        <li>Useful Websites</li>
+        <li>Printable PDFs</li>
+    </ul>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+
+    <p>Email: hirafuyu2003@gmail.com</p>
+</section>
+
+<footer>
+    <p>© 2026 Miss Haru - Computer Science Teacher</p>
+</footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
