@@ -184,3 +184,31 @@ footer{
     }
 
 }
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 30px;
+    background:white;
+    box-shadow:0 2px 8px rgba(0,0,0,.1);
+}
+
+.nav-links a{
+    margin-right:15px;
+    text-decoration:none;
+    color:#6c63ff;
+    font-weight:bold;
+}
+
+.controls{
+    display:flex;
+    gap:10px;
+}
+
+#themeBtn,
+#languageSelect{
+    padding:8px 12px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+}
