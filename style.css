@@ -30,22 +30,6 @@ header p{
     margin-top:10px;
 }
 
-nav{
-    background:white;
-    text-align:center;
-    padding:15px;
-    box-shadow:0 2px 8px rgba(0,0,0,.1);
-    position:sticky;
-    top:0;
-    z-index:100;
-}
-
-nav a{
-    text-decoration:none;
-    color:#6c63ff;
-    margin:0 15px;
-    font-weight:bold;
-}
 
 nav a:hover{
     color:#4338ca;
