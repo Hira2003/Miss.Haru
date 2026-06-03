@@ -36,3 +36,30 @@ themeBtn.addEventListener("click", () => {
     }
 
 });
+const translations = {
+
+    en: {
+        welcome: "Welcome Students 👩‍🏫"
+    },
+
+    fr: {
+        welcome: "Bienvenue les élèves 👩‍🏫"
+    },
+
+    ar: {
+        welcome: "مرحبا بكم أيها التلاميذ 👩‍🏫"
+    }
+
+};
+
+const languageSelect =
+document.getElementById("languageSelect");
+
+languageSelect.addEventListener("change", () => {
+
+    const lang = languageSelect.value;
+
+    document.getElementById("welcomeTitle")
+        .textContent = translations[lang].welcome;
+
+});
