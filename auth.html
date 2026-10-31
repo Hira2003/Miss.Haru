@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teacher Account | Miss Haru</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="portal.css">
+</head>
+<body>
+  <header class="portal-header">
+    <h1>Miss Haru</h1>
+    <p>Teacher community · Sign in or create an account</p>
+  </header>
+  <nav><div class="nav-links"><a href="index.html">Home</a><a href="library.html">Document library</a></div><div id="sessionStatus"></div></nav>
+  <main class="portal-main narrow">
+    <h2>Teacher account</h2>
+    <p>Register to submit lessons, exercises and exams for review.</p>
+    <div id="portalMessage" class="portal-message" role="status" hidden></div>
+    <form id="authForm" class="portal-form">
+      <label for="authMode">I want to</label>
+      <select id="authMode"><option value="login">Sign in</option><option value="register">Create a teacher account</option></select>
+      <div id="nameField" hidden><label for="authName">Full name</label><input id="authName" autocomplete="name" placeholder="Your name"></div>
+      <label for="authEmail">Email</label><input id="authEmail" type="email" required autocomplete="email">
+      <label for="authPassword">Password</label><input id="authPassword" type="password" required minlength="8" autocomplete="current-password">
+      <button class="btn" id="authSubmit" type="submit">Sign in</button>
+    </form>
+    <p class="portal-note">New accounts may need email confirmation before signing in. Your submissions stay private until approved by the site administrator.</p>
+  </main>
+  <footer><p>© 2026 Miss Haru</p></footer>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase-config.js"></script>
+  <script src="portal.js"></script>
+</body>
+</html>
