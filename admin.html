@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Review | Miss Haru</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="portal.css">
+</head>
+<body>
+  <header class="portal-header"><h1>Miss Haru</h1><p>Administrator dashboard</p></header>
+  <nav><div class="nav-links"><a href="index.html">Home</a><a href="library.html">Document library</a></div><div id="sessionStatus"></div></nav>
+  <main class="portal-main">
+    <div id="portalMessage" class="portal-message" role="status" hidden></div>
+    <section class="portal-section"><h2>Pending submissions</h2><p>Preview each file before approving or rejecting it. Approved files become visible in the public library.</p>
+      <div id="pendingDocuments" class="document-grid"><p>Loading submissions…</p></div>
+    </section>
+  </main>
+  <footer><p>© 2026 Miss Haru</p></footer>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase-config.js"></script>
+  <script src="portal.js"></script>
+</body>
+</html>
