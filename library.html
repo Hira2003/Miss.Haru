@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document Library | Miss Haru</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="portal.css">
+</head>
+<body>
+  <header class="portal-header"><h1>Miss Haru</h1><p>Shared teaching resources · 1AS Computer Science</p></header>
+  <nav><div class="nav-links"><a href="index.html">Home</a><a href="library.html">Document library</a><a href="admin.html" id="adminNavLink" hidden>Admin review</a></div><div id="sessionStatus"></div></nav>
+  <main class="portal-main">
+    <div id="portalMessage" class="portal-message" role="status" hidden></div>
+    <section class="portal-section">
+      <div class="section-heading"><div><h2>Approved documents</h2><p>Browse resources shared by teachers.</p></div>
+        <label class="filter-label">Category
+          <select id="libraryCategory"><option value="all">All documents</option><option value="lesson">Lessons</option><option value="exercise">Exercises</option><option value="exam">Exams</option><option value="resource">Other resources</option></select>
+        </label>
+      </div>
+      <div id="publicDocuments" class="document-grid"><p>Loading library…</p></div>
+    </section>
+    <section class="portal-section upload-section">
+      <h2>Share a teaching document</h2>
+      <p>Sign in as a teacher to submit a PDF or DOCX. Every submission is private until the administrator approves it.</p>
+      <form id="uploadForm" class="portal-form">
+        <label for="documentTitle">Document title</label><input id="documentTitle" required maxlength="140" placeholder="e.g. Introduction to algorithms">
+        <div class="form-grid">
+          <div><label for="teacherName">Teacher name</label><input id="teacherName" required maxlength="100"></div>
+          <div><label for="schoolName">School name</label><input id="schoolName" required maxlength="140"></div>
+          <div><label for="documentCategory">Category</label><select id="documentCategory" required><option value="lesson">Lesson</option><option value="exercise">Exercise</option><option value="exam">Exam / Test</option><option value="resource">Other resource</option></select></div>
+          <div><label for="documentSemester">Semester (optional)</label><select id="documentSemester"><option value="">Not specified</option><option value="1">Semester 1</option><option value="2">Semester 2</option><option value="3">Semester 3</option></select></div>
+        </div>
+        <label for="documentFile">File (PDF or DOCX, maximum 20 MB)</label><input id="documentFile" type="file" accept=".pdf,.docx,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document" required>
+        <button class="btn" id="uploadSubmit" type="submit">Submit for approval</button>
+      </form>
+      <h3 class="subheading">My submissions</h3><ul id="mySubmissions" class="submission-list"><li>Sign in to see your submissions.</li></ul>
+    </section>
+  </main>
+  <footer><p>© 2026 Miss Haru</p></footer>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase-config.js"></script>
+  <script src="portal.js"></script>
+</body>
+</html>
