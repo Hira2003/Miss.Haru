@@ -171,9 +171,9 @@
     await loadMySubmissions(user);
   }
 
-  async function fileLink(doc) {
+  async function fileLink(doc, download = false) {
     const { data, error } = await client.storage.from("teacher-submissions")
-      .createSignedUrl(doc.file_path, 900, { download: false });
+      .createSignedUrl(doc.file_path, 900, { download });
     if (error) throw error;
     return data.signedUrl;
   }
@@ -197,7 +197,7 @@
     const target = $("#publicDocuments");
     if (!target) return;
     const { data, error } = await client.from("documents")
-      .select("id,title,teacher_name,school_name,category,semester,file_name,file_path,created_at")
+      .select("id,title,teacher_name,school_name,category,semester,file_name,file_path,mime_type,created_at")
       .eq("status", "approved").order("created_at", { ascending: false });
     if (error) throw error;
     const filter = $("#libraryCategory")?.value || "all";
@@ -208,7 +208,7 @@
     }
     target.innerHTML = "";
     for (const doc of filtered) {
-      const url = await fileLink(doc);
+      const url = await fileLink(doc, doc.mime_type !== "application/pdf");
       const card = document.createElement("article");
       card.className = "document-card";
       const heading = document.createElement("h3");
@@ -273,7 +273,7 @@
         preview.textContent = doc.mime_type === "application/pdf" ? "Preview PDF" : "Download DOCX";
         preview.addEventListener("click", async () => {
           try {
-            const url = await fileLink(doc);
+            const url = await fileLink(doc, doc.mime_type !== "application/pdf");
             window.open(url, "_blank", "noopener");
           } catch (error) { message(error.message, "error"); }
         });
