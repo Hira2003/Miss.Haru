@@ -235,7 +235,16 @@
     filter?.addEventListener("change", () => loadPublicLibrary().catch(error => message(error.message, "error")));
     await loadPublicLibrary();
     const user = await currentUser();
-    if (user && $("#uploadForm")) await initUpload();
+    if (user && $("#uploadForm")) {
+      await initUpload();
+    } else if ($("#uploadForm")) {
+      $("#uploadForm").hidden = true;
+      const prompt = document.createElement("p");
+      prompt.className = "portal-note";
+      prompt.innerHTML = 'To submit a document, <a href="auth.html?next=library.html">sign in or create a teacher account</a>. You can browse approved resources without signing in.';
+      $("#uploadForm").before(prompt);
+      $("#mySubmissions").innerHTML = '<li>Sign in to view your submissions.</li>';
+    }
   }
 
   async function initAdmin() {
