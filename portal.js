@@ -32,10 +32,13 @@
     return;
   }
 
+  // getSession() is the right check for an optional visitor session.
+  // getUser() can return AuthSessionMissingError when a visitor is signed out,
+  // which must not break the public document library.
   async function currentUser() {
-    const { data: { user }, error } = await client.auth.getUser();
+    const { data: { session }, error } = await client.auth.getSession();
     if (error) throw error;
-    return user;
+    return session ? session.user : null;
   }
 
   async function requireUser() {
