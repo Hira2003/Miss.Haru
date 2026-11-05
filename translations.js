@@ -101,7 +101,7 @@ const translations = {
     },
     ar: {
         title: "Miss Haru | أستاذة علوم الحاسوب",
-        header_h1: "Miss.Haru",
+        header_h1: "Miss Haru",
         header_p: "أستاذة علوم الحاسوب • 1AS",
         nav_about: "عن",
         nav_library: "مكتبة الوثائق",
