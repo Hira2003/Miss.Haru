@@ -100,9 +100,9 @@ const translations = {
         footer: "© 2026 Miss Haru - Professeur d'Informatique"
     },
     ar: {
-        title: "مس هارو | معلمة علوم الحاسوب",
-        header_h1: "مس هارو",
-        header_p: "معلمة علوم الحاسوب • 1AS",
+        title: "Miss Haru | أستاذة علوم الحاسوب",
+        header_h1: "Miss.Haru",
+        header_p: "أستاذة علوم الحاسوب • 1AS",
         nav_about: "عن",
         nav_library: "مكتبة الوثائق",
         nav_lessons: "الدروس",
