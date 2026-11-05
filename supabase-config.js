@@ -4,5 +4,5 @@
  * from Supabase Dashboard > Project Settings > API Keys.
  * Never place a secret/service_role key in this file.
  */
-window.MISS_HARU_SUPABASE_URL = "YOUR_SUPABASE_PROJECT_URL";
-window.MISS_HARU_SUPABASE_PUBLISHABLE_KEY = "YOUR_SUPABASE_PUBLISHABLE_KEY";
+window.MISS_HARU_SUPABASE_URL = "lcyilgekiaesdncuzrhb";
+window.MISS_HARU_SUPABASE_PUBLISHABLE_KEY = "sb_publishable_LYMqa_MRW2G4xvUW4z7BIg_KuiP4RvI";
